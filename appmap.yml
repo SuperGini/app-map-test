@@ -1,0 +1,4 @@
+name: "app-map-test"
+appmap_dir: "tmp/appmap"
+packages:
+- path: "org.mihai"

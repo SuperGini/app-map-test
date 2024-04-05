@@ -1,0 +1,14 @@
+[
+  {
+    "caller": "POST /user",
+    "callee": "org/mihai"
+  },
+  {
+    "caller": "org/mihai",
+    "callee": "insert into user (address_id,age,username) values (?,?,?)"
+  },
+  {
+    "caller": "org/mihai",
+    "callee": "select u1_0.id,u1_0.address_id,u1_0.age,u1_0.username from user u1_0 where u1_0.username=?"
+  }
+]

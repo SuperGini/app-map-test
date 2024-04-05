@@ -1,0 +1,236 @@
+[
+  {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "name": "id",
+                        "type": "function",
+                        "static": false,
+                        "location": "org/mihai/dto/response/UserResponse.java:7"
+                      },
+                      {
+                        "name": "age",
+                        "type": "function",
+                        "static": false,
+                        "location": "org/mihai/dto/response/UserResponse.java:7"
+                      },
+                      {
+                        "name": "username",
+                        "type": "function",
+                        "static": false,
+                        "location": "org/mihai/dto/response/UserResponse.java:7"
+                      },
+                      {
+                        "name": "build",
+                        "type": "function",
+                        "static": false,
+                        "location": "org/mihai/dto/response/UserResponse.java:7"
+                      }
+                    ],
+                    "name": "UserResponse$UserResponseBuilder",
+                    "type": "class"
+                  }
+                ],
+                "name": "response",
+                "type": "package"
+              }
+            ],
+            "name": "dto",
+            "type": "package"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "name": "builder",
+                    "type": "function",
+                    "static": true,
+                    "location": "org/mihai/model/Address.java:13"
+                  }
+                ],
+                "name": "Address",
+                "type": "class"
+              },
+              {
+                "children": [
+                  {
+                    "name": "build",
+                    "type": "function",
+                    "static": false,
+                    "location": "org/mihai/model/Address.java:13"
+                  },
+                  {
+                    "name": "street",
+                    "type": "function",
+                    "static": false,
+                    "location": "org/mihai/model/Address.java:13"
+                  },
+                  {
+                    "name": "number",
+                    "type": "function",
+                    "static": false,
+                    "location": "org/mihai/model/Address.java:13"
+                  }
+                ],
+                "name": "Address$AddressBuilder",
+                "type": "class"
+              },
+              {
+                "children": [
+                  {
+                    "name": "username",
+                    "type": "function",
+                    "static": false,
+                    "location": "org/mihai/model/User.java:20"
+                  },
+                  {
+                    "name": "age",
+                    "type": "function",
+                    "static": false,
+                    "location": "org/mihai/model/User.java:20"
+                  },
+                  {
+                    "name": "build",
+                    "type": "function",
+                    "static": false,
+                    "location": "org/mihai/model/User.java:20"
+                  }
+                ],
+                "name": "User$UserBuilder",
+                "type": "class"
+              },
+              {
+                "children": [
+                  {
+                    "name": "builder",
+                    "type": "function",
+                    "static": true,
+                    "location": "org/mihai/model/User.java:20"
+                  }
+                ],
+                "name": "User",
+                "type": "class"
+              }
+            ],
+            "name": "model",
+            "type": "package"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "name": "saveUser",
+                    "type": "function",
+                    "static": false,
+                    "location": "org/mihai/service/UserService.java:28"
+                  }
+                ],
+                "name": "UserService",
+                "type": "class"
+              }
+            ],
+            "name": "service",
+            "type": "package"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "name": "findByUsername",
+                    "type": "function",
+                    "static": false,
+                    "location": "org/mihai/repository/UserRepository.java:-1"
+                  }
+                ],
+                "name": "UserRepository",
+                "type": "class"
+              }
+            ],
+            "name": "repository",
+            "type": "package"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "name": "saveUser",
+                    "type": "function",
+                    "static": false,
+                    "location": "org/mihai/controller/UserController.java:27"
+                  }
+                ],
+                "name": "UserController",
+                "type": "class"
+              }
+            ],
+            "name": "controller",
+            "type": "package"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "name": "convertFrom",
+                    "type": "function",
+                    "static": true,
+                    "location": "org/mihai/convertor/UserConvertor.java:19"
+                  },
+                  {
+                    "name": "convertFrom",
+                    "type": "function",
+                    "static": true,
+                    "location": "org/mihai/convertor/UserConvertor.java:40"
+                  }
+                ],
+                "name": "UserConvertor",
+                "type": "class"
+              }
+            ],
+            "name": "convertor",
+            "type": "package"
+          }
+        ],
+        "name": "mihai",
+        "type": "package"
+      }
+    ],
+    "name": "org",
+    "type": "package"
+  },
+  {
+    "type": "http",
+    "name": "HTTP server requests",
+    "children": [
+      {
+        "type": "route",
+        "name": "POST /user"
+      }
+    ]
+  },
+  {
+    "type": "database",
+    "name": "Database",
+    "children": [
+      {
+        "type": "query",
+        "name": "select u1_0.id,u1_0.address_id,u1_0.age,u1_0.username from user u1_0 where u1_0.username=?"
+      },
+      {
+        "type": "query",
+        "name": "insert into user (address_id,age,username) values (?,?,?)"
+      }
+    ]
+  }
+]

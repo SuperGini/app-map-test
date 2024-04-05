@@ -1,0 +1,8 @@
+[
+  "org/mihai/controller",
+  "org/mihai/convertor",
+  "org/mihai/dto/response",
+  "org/mihai/model",
+  "org/mihai/repository",
+  "org/mihai/service"
+]

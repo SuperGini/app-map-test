@@ -1,0 +1,7 @@
+[
+  {
+    "route": "POST /user",
+    "parameters": "()",
+    "status": 201
+  }
+]

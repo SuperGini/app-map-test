@@ -1,0 +1,876 @@
+{
+  "events": [
+    {
+      "event": "call",
+      "http_server_request": {
+        "headers": {
+          "content-length": "132",
+          "postman-token": "79a347b6-21b5-4b93-94bc-fb5683c0eaed",
+          "host": "localhost:8080",
+          "content-type": "application/json",
+          "connection": "keep-alive",
+          "accept-encoding": "gzip, deflate, br",
+          "user-agent": "PostmanRuntime/7.37.3",
+          "accept": "*/*"
+        },
+        "normalized_path_info": "/user",
+        "path_info": "/user",
+        "protocol": "HTTP/1.1",
+        "request_method": "POST"
+      },
+      "id": 1,
+      "thread_id": 45
+    },
+    {
+      "defined_class": "org.mihai.controller.UserController",
+      "event": "call",
+      "id": 2,
+      "lineno": 27,
+      "method_id": "saveUser",
+      "parameters": [
+        {
+          "class": "org.mihai.dto.request.UserRequest",
+          "kind": "req",
+          "name": "request",
+          "object_id": 16584031,
+          "value": "UserRequest[username=User4, age=30, address=AddressRequest[street=Rosewood Dr, number=100]]"
+        }
+      ],
+      "path": "org/mihai/controller/UserController.java",
+      "receiver": {
+        "class": "org.mihai.controller.UserController",
+        "object_id": 700537906,
+        "value": "org.mihai.controller.UserController@29c15c32"
+      },
+      "static": false,
+      "thread_id": 45
+    },
+    {
+      "defined_class": "org.mihai.service.UserService",
+      "event": "call",
+      "id": 3,
+      "lineno": 28,
+      "method_id": "saveUser",
+      "parameters": [
+        {
+          "class": "org.mihai.dto.request.UserRequest",
+          "kind": "req",
+          "name": "userRequest",
+          "object_id": 16584031,
+          "value": "UserRequest[username=User4, age=30, address=AddressRequest[street=Rosewood Dr, number=100]]"
+        }
+      ],
+      "path": "org/mihai/service/UserService.java",
+      "receiver": {
+        "class": "org.mihai.service.UserService",
+        "object_id": 1459556331,
+        "value": "org.mihai.service.UserService@56ff0feb"
+      },
+      "static": false,
+      "thread_id": 45
+    },
+    {
+      "defined_class": "org.mihai.repository.UserRepository",
+      "event": "call",
+      "id": 4,
+      "lineno": -1,
+      "method_id": "findByUsername",
+      "parameters": [
+        {
+          "class": "java.lang.String",
+          "kind": "req",
+          "name": "p0",
+          "object_id": 130570678,
+          "value": "User4"
+        }
+      ],
+      "path": "org/mihai/repository/UserRepository.java",
+      "receiver": {
+        "class": "jdk.proxy2.$Proxy179",
+        "object_id": 244892535,
+        "value": "org.springframework.data.jpa.repository.support.SimpleJpaRepository@3efdbd02"
+      },
+      "static": false,
+      "thread_id": 45
+    },
+    {
+      "event": "call",
+      "id": 5,
+      "sql_query": {
+        "database_type": "MySQL",
+        "sql": "select u1_0.id,u1_0.address_id,u1_0.age,u1_0.username from user u1_0 where u1_0.username=?"
+      },
+      "thread_id": 45
+    },
+    {
+      "elapsed": 0.00020903,
+      "event": "return",
+      "id": 6,
+      "parent_id": 5,
+      "thread_id": 45
+    },
+    {
+      "elapsed": 0.00962589,
+      "event": "return",
+      "id": 7,
+      "parent_id": 4,
+      "return_value": {
+        "class": "java.util.Optional",
+        "object_id": 513678372,
+        "value": "Optional.empty"
+      },
+      "thread_id": 45
+    },
+    {
+      "defined_class": "org.mihai.convertor.UserConvertor",
+      "event": "call",
+      "id": 8,
+      "lineno": 19,
+      "method_id": "convertFrom",
+      "parameters": [
+        {
+          "class": "org.mihai.dto.request.UserRequest",
+          "kind": "req",
+          "name": "request",
+          "object_id": 16584031,
+          "value": "UserRequest[username=User4, age=30, address=AddressRequest[street=Rosewood Dr, number=100]]"
+        }
+      ],
+      "path": "org/mihai/convertor/UserConvertor.java",
+      "static": true,
+      "thread_id": 45
+    },
+    {
+      "defined_class": "org.mihai.model.Address",
+      "event": "call",
+      "id": 9,
+      "lineno": 13,
+      "method_id": "builder",
+      "path": "org/mihai/model/Address.java",
+      "static": true,
+      "thread_id": 45
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 10,
+      "parent_id": 9,
+      "return_value": {
+        "class": "org.mihai.model.Address$AddressBuilder",
+        "object_id": 1687485089,
+        "value": "Address.AddressBuilder(id=null, street=null, number=null)"
+      },
+      "thread_id": 45
+    },
+    {
+      "defined_class": "org.mihai.model.Address$AddressBuilder",
+      "event": "call",
+      "id": 11,
+      "lineno": 13,
+      "method_id": "street",
+      "parameters": [
+        {
+          "class": "java.lang.String",
+          "kind": "req",
+          "name": "street",
+          "object_id": 171896448,
+          "value": "Rosewood Dr"
+        }
+      ],
+      "path": "org/mihai/model/Address.java",
+      "receiver": {
+        "class": "org.mihai.model.Address$AddressBuilder",
+        "object_id": 1687485089,
+        "value": "Address.AddressBuilder(id=null, street=Rosewood Dr, number=null)"
+      },
+      "static": false,
+      "thread_id": 45
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 12,
+      "parent_id": 11,
+      "return_value": {
+        "class": "org.mihai.model.Address$AddressBuilder",
+        "object_id": 1687485089,
+        "value": "Address.AddressBuilder(id=null, street=Rosewood Dr, number=null)"
+      },
+      "thread_id": 45
+    },
+    {
+      "defined_class": "org.mihai.model.Address$AddressBuilder",
+      "event": "call",
+      "id": 13,
+      "lineno": 13,
+      "method_id": "number",
+      "parameters": [
+        {
+          "class": "java.lang.String",
+          "kind": "req",
+          "name": "number",
+          "object_id": 262044446,
+          "value": "100"
+        }
+      ],
+      "path": "org/mihai/model/Address.java",
+      "receiver": {
+        "class": "org.mihai.model.Address$AddressBuilder",
+        "object_id": 1687485089,
+        "value": "Address.AddressBuilder(id=null, street=Rosewood Dr, number=100)"
+      },
+      "static": false,
+      "thread_id": 45
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 14,
+      "parent_id": 13,
+      "return_value": {
+        "class": "org.mihai.model.Address$AddressBuilder",
+        "object_id": 1687485089,
+        "value": "Address.AddressBuilder(id=null, street=Rosewood Dr, number=100)"
+      },
+      "thread_id": 45
+    },
+    {
+      "defined_class": "org.mihai.model.Address$AddressBuilder",
+      "event": "call",
+      "id": 15,
+      "lineno": 13,
+      "method_id": "build",
+      "path": "org/mihai/model/Address.java",
+      "receiver": {
+        "class": "org.mihai.model.Address$AddressBuilder",
+        "object_id": 1687485089,
+        "value": "Address.AddressBuilder(id=null, street=Rosewood Dr, number=100)"
+      },
+      "static": false,
+      "thread_id": 45
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 16,
+      "parent_id": 15,
+      "return_value": {
+        "class": "org.mihai.model.Address",
+        "object_id": 1137097751,
+        "value": "Address(id=null, street=Rosewood Dr, number=100)"
+      },
+      "thread_id": 45
+    },
+    {
+      "defined_class": "org.mihai.model.User",
+      "event": "call",
+      "id": 17,
+      "lineno": 20,
+      "method_id": "builder",
+      "path": "org/mihai/model/User.java",
+      "static": true,
+      "thread_id": 45
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 18,
+      "parent_id": 17,
+      "return_value": {
+        "class": "org.mihai.model.User$UserBuilder",
+        "object_id": 12851004,
+        "value": "User.UserBuilder(id=null, username=null, age=0, address=null, orders=null)"
+      },
+      "thread_id": 45
+    },
+    {
+      "defined_class": "org.mihai.model.User$UserBuilder",
+      "event": "call",
+      "id": 19,
+      "lineno": 20,
+      "method_id": "age",
+      "parameters": [
+        {
+          "class": "java.lang.Integer",
+          "kind": "req",
+          "name": "age",
+          "object_id": 2113119050,
+          "value": "30"
+        }
+      ],
+      "path": "org/mihai/model/User.java",
+      "receiver": {
+        "class": "org.mihai.model.User$UserBuilder",
+        "object_id": 12851004,
+        "value": "User.UserBuilder(id=null, username=null, age=30, address=null, orders=null)"
+      },
+      "static": false,
+      "thread_id": 45
+    },
+    {
+      "elapsed": 0.00010024,
+      "event": "return",
+      "id": 20,
+      "parent_id": 19,
+      "return_value": {
+        "class": "org.mihai.model.User$UserBuilder",
+        "object_id": 12851004,
+        "value": "User.UserBuilder(id=null, username=null, age=30, address=null, orders=null)"
+      },
+      "thread_id": 45
+    },
+    {
+      "defined_class": "org.mihai.model.User$UserBuilder",
+      "event": "call",
+      "id": 21,
+      "lineno": 20,
+      "method_id": "username",
+      "parameters": [
+        {
+          "class": "java.lang.String",
+          "kind": "req",
+          "name": "username",
+          "object_id": 130570678,
+          "value": "User4"
+        }
+      ],
+      "path": "org/mihai/model/User.java",
+      "receiver": {
+        "class": "org.mihai.model.User$UserBuilder",
+        "object_id": 12851004,
+        "value": "User.UserBuilder(id=null, username=User4, age=30, address=null, orders=null)"
+      },
+      "static": false,
+      "thread_id": 45
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 22,
+      "parent_id": 21,
+      "return_value": {
+        "class": "org.mihai.model.User$UserBuilder",
+        "object_id": 12851004,
+        "value": "User.UserBuilder(id=null, username=User4, age=30, address=null, orders=null)"
+      },
+      "thread_id": 45
+    },
+    {
+      "defined_class": "org.mihai.model.User$UserBuilder",
+      "event": "call",
+      "id": 23,
+      "lineno": 20,
+      "method_id": "build",
+      "path": "org/mihai/model/User.java",
+      "receiver": {
+        "class": "org.mihai.model.User$UserBuilder",
+        "object_id": 12851004,
+        "value": "User.UserBuilder(id=null, username=User4, age=30, address=null, orders=null)"
+      },
+      "static": false,
+      "thread_id": 45
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 24,
+      "parent_id": 23,
+      "return_value": {
+        "class": "org.mihai.model.User",
+        "object_id": 1566205935,
+        "value": "User(id=null, username=User4, age=30, address=null, orders=null)"
+      },
+      "thread_id": 45
+    },
+    {
+      "elapsed": 0.00040016,
+      "event": "return",
+      "id": 25,
+      "parent_id": 8,
+      "return_value": {
+        "class": "org.mihai.model.User",
+        "object_id": 1566205935,
+        "value": "User(id=null, username=User4, age=30, address=null, orders=null)"
+      },
+      "thread_id": 45
+    },
+    {
+      "event": "call",
+      "id": 26,
+      "sql_query": {
+        "database_type": "MySQL",
+        "sql": "insert into user (address_id,age,username) values (?,?,?)"
+      },
+      "thread_id": 45
+    },
+    {
+      "elapsed": 0.00009984,
+      "event": "return",
+      "id": 27,
+      "parent_id": 26,
+      "thread_id": 45
+    },
+    {
+      "defined_class": "org.mihai.convertor.UserConvertor",
+      "event": "call",
+      "id": 28,
+      "lineno": 40,
+      "method_id": "convertFrom",
+      "parameters": [
+        {
+          "class": "org.mihai.model.User",
+          "kind": "req",
+          "name": "user",
+          "object_id": 1566205935,
+          "value": "User(id=17, username=User4, age=30, address=null, orders=null)"
+        }
+      ],
+      "path": "org/mihai/convertor/UserConvertor.java",
+      "static": true,
+      "thread_id": 45
+    },
+    {
+      "defined_class": "org.mihai.dto.response.UserResponse$UserResponseBuilder",
+      "event": "call",
+      "id": 29,
+      "lineno": 7,
+      "method_id": "id",
+      "parameters": [
+        {
+          "class": "java.lang.Integer",
+          "kind": "req",
+          "name": "id",
+          "object_id": 379508533,
+          "value": "17"
+        }
+      ],
+      "path": "org/mihai/dto/response/UserResponse.java",
+      "receiver": {
+        "class": "org.mihai.dto.response.UserResponse$UserResponseBuilder",
+        "object_id": 86068008,
+        "value": "UserResponse.UserResponseBuilder(id=17, username=null, age=0, address=null, orders=null)"
+      },
+      "static": false,
+      "thread_id": 45
+    },
+    {
+      "elapsed": 0.00020481,
+      "event": "return",
+      "id": 30,
+      "parent_id": 29,
+      "return_value": {
+        "class": "org.mihai.dto.response.UserResponse$UserResponseBuilder",
+        "object_id": 86068008,
+        "value": "UserResponse.UserResponseBuilder(id=17, username=null, age=0, address=null, orders=null)"
+      },
+      "thread_id": 45
+    },
+    {
+      "defined_class": "org.mihai.dto.response.UserResponse$UserResponseBuilder",
+      "event": "call",
+      "id": 31,
+      "lineno": 7,
+      "method_id": "username",
+      "parameters": [
+        {
+          "class": "java.lang.String",
+          "kind": "req",
+          "name": "username",
+          "object_id": 130570678,
+          "value": "User4"
+        }
+      ],
+      "path": "org/mihai/dto/response/UserResponse.java",
+      "receiver": {
+        "class": "org.mihai.dto.response.UserResponse$UserResponseBuilder",
+        "object_id": 86068008,
+        "value": "UserResponse.UserResponseBuilder(id=17, username=User4, age=0, address=null, orders=null)"
+      },
+      "static": false,
+      "thread_id": 45
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 32,
+      "parent_id": 31,
+      "return_value": {
+        "class": "org.mihai.dto.response.UserResponse$UserResponseBuilder",
+        "object_id": 86068008,
+        "value": "UserResponse.UserResponseBuilder(id=17, username=User4, age=0, address=null, orders=null)"
+      },
+      "thread_id": 45
+    },
+    {
+      "defined_class": "org.mihai.dto.response.UserResponse$UserResponseBuilder",
+      "event": "call",
+      "id": 33,
+      "lineno": 7,
+      "method_id": "age",
+      "parameters": [
+        {
+          "class": "java.lang.Integer",
+          "kind": "req",
+          "name": "age",
+          "object_id": 2113119050,
+          "value": "30"
+        }
+      ],
+      "path": "org/mihai/dto/response/UserResponse.java",
+      "receiver": {
+        "class": "org.mihai.dto.response.UserResponse$UserResponseBuilder",
+        "object_id": 86068008,
+        "value": "UserResponse.UserResponseBuilder(id=17, username=User4, age=30, address=null, orders=null)"
+      },
+      "static": false,
+      "thread_id": 45
+    },
+    {
+      "elapsed": 0.00009992,
+      "event": "return",
+      "id": 34,
+      "parent_id": 33,
+      "return_value": {
+        "class": "org.mihai.dto.response.UserResponse$UserResponseBuilder",
+        "object_id": 86068008,
+        "value": "UserResponse.UserResponseBuilder(id=17, username=User4, age=30, address=null, orders=null)"
+      },
+      "thread_id": 45
+    },
+    {
+      "defined_class": "org.mihai.dto.response.UserResponse$UserResponseBuilder",
+      "event": "call",
+      "id": 35,
+      "lineno": 7,
+      "method_id": "build",
+      "path": "org/mihai/dto/response/UserResponse.java",
+      "receiver": {
+        "class": "org.mihai.dto.response.UserResponse$UserResponseBuilder",
+        "object_id": 86068008,
+        "value": "UserResponse.UserResponseBuilder(id=17, username=User4, age=30, address=null, orders=null)"
+      },
+      "static": false,
+      "thread_id": 45
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 36,
+      "parent_id": 35,
+      "return_value": {
+        "class": "org.mihai.dto.response.UserResponse",
+        "object_id": 250538722,
+        "value": "UserResponse[id=17, username=User4, age=30, address=null, orders=null]"
+      },
+      "thread_id": 45
+    },
+    {
+      "elapsed": 0.0008243,
+      "event": "return",
+      "id": 37,
+      "parent_id": 28,
+      "return_value": {
+        "class": "org.mihai.dto.response.UserResponse",
+        "object_id": 250538722,
+        "value": "UserResponse[id=17, username=User4, age=30, address=null, orders=null]"
+      },
+      "thread_id": 45
+    },
+    {
+      "elapsed": 0.01756959,
+      "event": "return",
+      "id": 38,
+      "parent_id": 3,
+      "return_value": {
+        "class": "org.mihai.dto.response.UserResponse",
+        "object_id": 250538722,
+        "value": "UserResponse[id=17, username=User4, age=30, address=null, orders=null]"
+      },
+      "thread_id": 45
+    },
+    {
+      "elapsed": 0.0214866,
+      "event": "return",
+      "id": 39,
+      "parent_id": 2,
+      "return_value": {
+        "class": "org.mihai.dto.response.UserResponse",
+        "object_id": 250538722,
+        "value": "UserResponse[id=17, username=User4, age=30, address=null, orders=null]"
+      },
+      "thread_id": 45
+    },
+    {
+      "elapsed": 0.03799601,
+      "event": "return",
+      "http_server_response": {
+        "headers": {
+          "Transfer-Encoding": "chunked",
+          "Keep-Alive": "timeout=60",
+          "Connection": "keep-alive",
+          "Date": "Fri, 05 Apr 2024 17:00:30 GMT",
+          "Content-Type": "application/json"
+        },
+        "status": 201
+      },
+      "id": 40,
+      "parent_id": 1,
+      "thread_id": 45
+    }
+  ],
+  "version": "1.2",
+  "metadata": {
+    "name": "POST /user (201) - 20:00:30.261",
+    "app": "app-map-test",
+    "language": {
+      "name": "java",
+      "version": "21.0.2+13-58",
+      "engine": "OpenJDK 64-Bit Server VM"
+    },
+    "client": {
+      "name": "appmap-java",
+      "url": "https://github.com/appland/appmap-java"
+    },
+    "recorder": {
+      "name": "request_recording",
+      "type": "requests"
+    },
+    "recording": {}
+  },
+  "classMap": [
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "name": "id",
+                          "type": "function",
+                          "static": false,
+                          "location": "org/mihai/dto/response/UserResponse.java:7"
+                        },
+                        {
+                          "name": "age",
+                          "type": "function",
+                          "static": false,
+                          "location": "org/mihai/dto/response/UserResponse.java:7"
+                        },
+                        {
+                          "name": "username",
+                          "type": "function",
+                          "static": false,
+                          "location": "org/mihai/dto/response/UserResponse.java:7"
+                        },
+                        {
+                          "name": "build",
+                          "type": "function",
+                          "static": false,
+                          "location": "org/mihai/dto/response/UserResponse.java:7"
+                        }
+                      ],
+                      "name": "UserResponse$UserResponseBuilder",
+                      "type": "class"
+                    }
+                  ],
+                  "name": "response",
+                  "type": "package"
+                }
+              ],
+              "name": "dto",
+              "type": "package"
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "name": "builder",
+                      "type": "function",
+                      "static": true,
+                      "location": "org/mihai/model/Address.java:13"
+                    }
+                  ],
+                  "name": "Address",
+                  "type": "class"
+                },
+                {
+                  "children": [
+                    {
+                      "name": "build",
+                      "type": "function",
+                      "static": false,
+                      "location": "org/mihai/model/Address.java:13"
+                    },
+                    {
+                      "name": "street",
+                      "type": "function",
+                      "static": false,
+                      "location": "org/mihai/model/Address.java:13"
+                    },
+                    {
+                      "name": "number",
+                      "type": "function",
+                      "static": false,
+                      "location": "org/mihai/model/Address.java:13"
+                    }
+                  ],
+                  "name": "Address$AddressBuilder",
+                  "type": "class"
+                },
+                {
+                  "children": [
+                    {
+                      "name": "username",
+                      "type": "function",
+                      "static": false,
+                      "location": "org/mihai/model/User.java:20"
+                    },
+                    {
+                      "name": "age",
+                      "type": "function",
+                      "static": false,
+                      "location": "org/mihai/model/User.java:20"
+                    },
+                    {
+                      "name": "build",
+                      "type": "function",
+                      "static": false,
+                      "location": "org/mihai/model/User.java:20"
+                    }
+                  ],
+                  "name": "User$UserBuilder",
+                  "type": "class"
+                },
+                {
+                  "children": [
+                    {
+                      "name": "builder",
+                      "type": "function",
+                      "static": true,
+                      "location": "org/mihai/model/User.java:20"
+                    }
+                  ],
+                  "name": "User",
+                  "type": "class"
+                }
+              ],
+              "name": "model",
+              "type": "package"
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "name": "saveUser",
+                      "type": "function",
+                      "static": false,
+                      "location": "org/mihai/service/UserService.java:28"
+                    }
+                  ],
+                  "name": "UserService",
+                  "type": "class"
+                }
+              ],
+              "name": "service",
+              "type": "package"
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "name": "findByUsername",
+                      "type": "function",
+                      "static": false,
+                      "location": "org/mihai/repository/UserRepository.java:-1"
+                    }
+                  ],
+                  "name": "UserRepository",
+                  "type": "class"
+                }
+              ],
+              "name": "repository",
+              "type": "package"
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "name": "saveUser",
+                      "type": "function",
+                      "static": false,
+                      "location": "org/mihai/controller/UserController.java:27"
+                    }
+                  ],
+                  "name": "UserController",
+                  "type": "class"
+                }
+              ],
+              "name": "controller",
+              "type": "package"
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "name": "convertFrom",
+                      "type": "function",
+                      "static": true,
+                      "location": "org/mihai/convertor/UserConvertor.java:19"
+                    },
+                    {
+                      "name": "convertFrom",
+                      "type": "function",
+                      "static": true,
+                      "location": "org/mihai/convertor/UserConvertor.java:40"
+                    }
+                  ],
+                  "name": "UserConvertor",
+                  "type": "class"
+                }
+              ],
+              "name": "convertor",
+              "type": "package"
+            }
+          ],
+          "name": "mihai",
+          "type": "package"
+        }
+      ],
+      "name": "org",
+      "type": "package"
+    },
+    {
+      "type": "http",
+      "name": "HTTP server requests",
+      "children": [
+        {
+          "type": "route",
+          "name": "POST /user"
+        }
+      ]
+    },
+    {
+      "type": "database",
+      "name": "Database",
+      "children": [
+        {
+          "type": "query",
+          "name": "select u1_0.id,u1_0.address_id,u1_0.age,u1_0.username from user u1_0 where u1_0.username=?"
+        },
+        {
+          "type": "query",
+          "name": "insert into user (address_id,age,username) values (?,?,?)"
+        }
+      ]
+    }
+  ]
+}

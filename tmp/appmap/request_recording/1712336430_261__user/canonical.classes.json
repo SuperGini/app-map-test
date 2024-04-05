@@ -1,0 +1,11 @@
+[
+  "org/mihai/controller/UserController",
+  "org/mihai/convertor/UserConvertor",
+  "org/mihai/dto/response/UserResponse$UserResponseBuilder",
+  "org/mihai/model/Address",
+  "org/mihai/model/Address$AddressBuilder",
+  "org/mihai/model/User",
+  "org/mihai/model/User$UserBuilder",
+  "org/mihai/repository/UserRepository",
+  "org/mihai/service/UserService"
+]
